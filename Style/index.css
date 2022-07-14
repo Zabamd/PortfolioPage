@@ -1,0 +1,369 @@
+@font-face {
+  font-family: "Higherjump";
+  src: url("font/HigherJump.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 24px;
+  scroll-behavior: smooth;
+}
+
+#nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 8vh;
+  background: #FFF;
+  color: #000;
+  text-transform: uppercase;
+  font-family: Ribbon;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#nav-bar #nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  height: 60%;
+  width: 30%;
+  text-align: center;
+}
+
+#nav-bar #nav-list a {
+  color: #000;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#nav-bar #nav-list li {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#nav-bar #nav-list .nav-link {
+  position: relative;
+  padding: 1em;
+  border: none;
+  background-color: #FFF;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin: 1em 0.8em;
+}
+
+#nav-bar #nav-list .nav-link::after, #nav-bar #nav-list .nav-link::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+#nav-bar #nav-list .nav-link::before {
+  top: 25%;
+}
+
+#nav-bar #nav-list .nav-link:hover:before {
+  top: 75%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#nav-bar #nav-list .nav-link:hover:after {
+  top: 25%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#landing-section {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFF;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Projects-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFF;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Projects-section h2 {
+  font-size: 30px;
+  font-family: "Higherjump";
+  color: #FFF;
+  grid-area: highlight;
+}
+
+#Projects-section p {
+  width: 30vw;
+  grid-area: text;
+}
+
+#Projects-section #card-container {
+  grid-area: card;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "card-1 card-1 card-1" auto "card-2 card-2 card-2" auto;
+}
+
+#Projects-section #card-container .card {
+  width: 90vw;
+  height: 50vh;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid #000;
+  border-radius: 5px;
+  margin: 1rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#Projects-section #card-container .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#Projects-section #card-container .card img {
+  width: 100px;
+  height: 100px;
+}
+
+#Projects-section #card-container .card #card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: card-1;
+}
+
+#Projects-section #card-container .card #card-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: card-2;
+}
+
+#form-section {
+  height: 100vh;
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#form-section #form-title {
+  margin: 20px;
+  font-size: 30px;
+  color: #000;
+  grid-area: highlight;
+}
+
+#form-section form {
+  width: 75%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  border: 5px solid;
+  border-color: #d3d3d3;
+  -webkit-box-shadow: 0 0 10px #a9a9a9;
+          box-shadow: 0 0 10px #a9a9a9;
+  background: #e9e9e9;
+  color: #000;
+}
+
+#form-section form #email-label {
+  margin-top: 20px;
+}
+
+#form-section form #email,
+#form-section form #title,
+#form-section form #message {
+  width: 100%;
+  font-size: 20px;
+  background: #FFF;
+  color: #000;
+  border: solid #000;
+  border-width: 0px 0px 2px 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#form-section form #message {
+  border-width: 2px;
+}
+
+#form-section form #submit {
+  position: relative;
+  border: solid #000;
+  border-width: 2px 0 2px 0;
+  background-color: #FFF;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  padding: 0.2em;
+  margin: 1em;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#form-section form #submit.active {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+@media (max-width: 1024px) {
+  #header #nav-bar #nav-list {
+    width: 60%;
+  }
+  #landing-section #img-text {
+    left: 50%;
+  }
+  #about-section {
+        grid-template-areas: "highlight" "text" "video" "card";
+    justify-items: center;
+  }
+  #about-section p {
+    width: 80%;
+  }
+  #about-section #card-container {
+        grid-template-areas: "card-1 card-2" "card-3 card-3";
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #header #nav-bar {
+    height: 15vh;
+  }
+  #header #nav-bar #nav-list,
+  #header #nav-bar h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -20%);
+            transform: translate(-50%, -20%);
+  }
+  #header #nav-bar h3 {
+    font-size: 19px;
+    -webkit-transform: translate(-50%, -170%);
+            transform: translate(-50%, -170%);
+  }
+  #header #nav-bar a {
+    font-size: 19px;
+  }
+  #landing-section #img-text {
+    font-size: 25px;
+    left: 20%;
+    top: 15%;
+  }
+  #landing-section #img-text span {
+    font-size: 25px;
+    left: 20%;
+    top: 70%;
+  }
+  #about-section {
+    height: 150vh;
+        grid-template-areas: "highlight" "text" "video" "card";
+    justify-items: center;
+  }
+  #about-section #video {
+    width: 90%;
+    height: 300px;
+  }
+  #about-section p {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
